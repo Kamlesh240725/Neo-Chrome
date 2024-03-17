@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-audiowide: Audiowide;
+    --font-anurati: Anurati;
+  
+    /* font sizes */
+    --font-size-xl: 1.25rem;
+  
+    /* Colors */
+    --color-gray-100: #221b1b;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gainsboro: rgba(229, 229, 229, 0.74);
+  
+    /* Border radiuses */
+    --br-3xl: 22px;
+    --br-43xl: 42px;
+    --br-8xs-8: 4.8px;
+  }
+  
