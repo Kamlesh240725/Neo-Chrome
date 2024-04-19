@@ -9,52 +9,59 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Audiowide:wght@400&display=swap"
     />
-    <link rel="icon" type="image/png" href="./New-Chrome Assets/Assistant.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./New-Chrome Assets/Assistant.svg"
+    />
     <title>Neo Chrome</title>
   </head>
   <body>
     <div class="new-crome-1">
       <div class="date-and-time">
-        <div id="day"></div>
-        <div id="time"></div>
+        <div class="day">
+          <p id="day"></p>
+        </div>
+        <div class="time">
+          <p id="time"></p>
+        </div>
       </div>
       <div class="spotify">
-        Coming Soon
-        <!-- this part of code which is commented is under construction so read at your own risk -->
-        
-        <!-- <img class="union-icon" alt="" src="./public/union.svg" />
-          
-          <img class="bar-icon" alt="" src="./public/bar.svg" />
-          
-          <div class="player">
-            <img class="player-child" alt="" src="./public/polygon-11.svg" />
-            
-            <img class="player-item" alt="" src="./public/polygon-9.svg" />
-            
-            <img class="player-inner" alt="" src="./public/polygon-10.svg" />
-            
-            <img class="vector-icon" alt="" src="./public/vector-39.svg" />
-            
-            <img class="player-child1" alt="" src="./public/vector-40.svg" />
+        <div class="spotify-player">
+          <div class="audio-thumbnail">
           </div>
-          <img class="cilloop-icon" alt="" src="./public/cilloop.svg" />
-          
-          <div class="liner">
-            <div class="memory-reboo">Memory Reboo</div>
+          <div class="audio-controls-section">
+            <div class="controls-row1">
+              <div class="song-name-container">
+                <marquee behavior="" direction="">Ram Siya Ram (From "Adipurush")</marquee>
+              </div>
+              <button class="loop-toggle-btn"></button>
+            </div>
+            <div class="controls-row2">
+              <input type="range" id="seek-slider" max="100" value="0" />
+            </div>
+            <div class="controls-row3">
+              <button class="backward-btn"></button>
+              <button class="play-pause-btn"></button>
+              <button class="forward-btn"></button>
+            </div>
           </div>
-          <img class="spotify-item" alt="" src="./public/vector-41.svg" />
-          
-          <img class="spotify-inner" alt="" src="./public/vector-41.svg" /> -->
         </div>
-        <div class="searchbar">
-          <img
+      </div>
+      <div class="searchbar">
+        <img
           class="assistant-icon"
           alt=""
-          src="./New-Chrome Assets/Assistant.png"
+          src="./New-Chrome Assets/Assistant.svg"
+        />
+        <div class="search-section">
+          <input
+            type="text"
+            name=""
+            id="searchQuery"
+            placeholder="Search Google or type a uRL"
           />
-          <div class="search-section">
-            <input type="text" name="" id="searchQuery" placeholder="Search Google or type a uRL">
-            <button id="btn"></button>
+          <button id="btn"></button>
         </div>
       </div>
       <div class="default-apps">
@@ -62,22 +69,22 @@
           <div class="social-child">
             <div class="app-type1 r1">
               <a href="https://web.whatsapp.com/">
-                <img src="./New-Chrome Assets/Whatsapp.png" alt="" />
+                <img src="./New-Chrome Assets/Whatsapp.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r1">
               <a href="https://youtube.com">
-                <img src="./New-Chrome Assets/YT.png" alt="" />
+                <img src="./New-Chrome Assets/YT.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://instagram.com">
-                <img src="./New-Chrome Assets/Insta.png" alt="" />
+                <img src="./New-Chrome Assets/Insta.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://www.linkedin.com">
-                <img src="./New-Chrome Assets/LinkedIn.png" alt="" />
+                <img src="./New-Chrome Assets/LinkedIn.svg" alt="" />
               </a>
             </div>
           </div>
@@ -87,22 +94,22 @@
           <div class="work-child">
             <div class="app-type1 r1">
               <a href="https://notion.com">
-                <img src="./New-Chrome Assets/NOTION.png" alt="" />
+                <img src="./New-Chrome Assets/NOTION.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r1">
               <a href="https://chat.openai.com/">
-                <img src="./New-Chrome Assets/Chat GPT.png" alt="" />
+                <img src="./New-Chrome Assets/Chat GPT.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://github.com/">
-                <img src="./New-Chrome Assets/Git Hub.png" alt="" />
+                <img src="./New-Chrome Assets/Git Hub.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://figma.com">
-                <img src="./New-Chrome Assets/Figma.png" alt="" />
+                <img src="./New-Chrome Assets/Figma.svg" alt="" />
               </a>
             </div>
           </div>
@@ -113,7 +120,7 @@
       <div class="dock">
         <div class="theme-button-section">
           <div class="theme-button">
-            <img src="./New-Chrome Assets/Button.png" alt="" />
+            <img src="./New-Chrome Assets/Theme Zelda.png" alt="" />
           </div>
         </div>
         <div class="customised-apps">
@@ -128,8 +135,8 @@
             </a>
           </div>
           <div class="app-type2">
-            <a href="https://groww.in/">
-              <img src="./New-Chrome Assets/groww.png" alt="" />
+            <a href="https://spline.design/">
+              <img src="./New-Chrome Assets/Spline.png" alt="" />
             </a>
           </div>
           <div class="app-type2">
@@ -143,5 +150,4 @@
     <script src="script.js"></script>
     <script src="temp.js"></script>
   </body>
-  </html>
-  
+</html>
