@@ -19,5 +19,10 @@ body {
     --br-3xl: 22px;
     --br-43xl: 42px;
     --br-8xs-8: 4.8px;
+
+    /* Cursor PNGs URL */
+    --cursor-default-url: url('./New-Chrome Assets/light/cursor/pointer.cur');
+    --cursor-pointer-url: url('./New-Chrome Assets/light/cursor/link.cur');
+    --cursor-text-url: url('./New-Chrome Assets/light/cursor/beam.cur');
   }
   

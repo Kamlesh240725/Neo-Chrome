@@ -12,7 +12,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="./New-Chrome Assets/Assistant.svg"
+      href="./New-Chrome Assets/Assistant.png"
     />
     <title>Neo Chrome</title>
   </head>
@@ -28,12 +28,13 @@
       </div>
       <div class="spotify">
         <div class="spotify-player">
-          <div class="audio-thumbnail">
-          </div>
+          <div class="audio-thumbnail"></div>
           <div class="audio-controls-section">
             <div class="controls-row1">
               <div class="song-name-container">
-                <marquee behavior="" direction="">Ram Siya Ram (From "Adipurush")</marquee>
+                <marquee behavior="" direction=""
+                  >Ram Siya Ram (From "Adipurush")</marquee
+                >
               </div>
               <button class="loop-toggle-btn"></button>
             </div>
@@ -49,19 +50,171 @@
         </div>
       </div>
       <div class="searchbar">
-        <img
-          class="assistant-icon"
-          alt=""
-          src="./New-Chrome Assets/Assistant.svg"
-        />
         <div class="search-section">
-          <input
-            type="text"
-            name=""
-            id="searchQuery"
-            placeholder="Search Google or type a uRL"
+          <img
+            class="assistant-icon"
+            alt=""
+            src="./New-Chrome Assets/Assistant.svg"
           />
-          <button id="btn"></button>
+          <div class="search-input">
+            <input
+              type="text"
+              name=""
+              id="searchQuery"
+              placeholder="Search Google or type a uRL"
+              spellcheck="false"
+              value=""
+              autocomplete="off"
+            />
+            <button id="btn"></button>
+          </div>
+        </div>
+        <div class="seperator-line"></div>
+        <div class="suggestion-section">
+          <ul class="suggestion-list">
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p></p>
+            </li>
+            <li class="suggestion-item suggestion-searched-item">
+              <img
+                class="recent-searched-icon"
+                src="./New-Chrome Assets/recent-searched-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                It is a long established fact that a reader will be distracted
+              </p>
+              <button class="recent-searched-delete-btn" onclick="removeSearchedItem(this)">
+                <img
+                  class="recent-searched-delete-icon"
+                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
+                  alt="img_here"
+                />
+              </button>
+            </li>
+            <li class="suggestion-item suggestion-searched-item">
+              <img
+                class="recent-searched-icon"
+                src="./New-Chrome Assets/recent-searched-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                It is a long established fact that a reader will be distracted
+              </p>
+              <button class="recent-searched-delete-btn" onclick="removeSearchedItem(this)">
+                <img
+                  class="recent-searched-delete-icon"
+                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
+                  alt="img_here"
+                />
+              </button>
+            </li>
+            <li class="suggestion-item suggestion-searched-item">
+              <img
+                class="recent-searched-icon"
+                src="./New-Chrome Assets/recent-searched-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                It is a long established fact that a reader will be distracted
+              </p>
+              <button class="recent-searched-delete-btn" onclick="removeSearchedItem(this)">
+                <img
+                  class="recent-searched-delete-icon"
+                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
+                  alt="img_here"
+                />
+              </button>
+            </li>
+            <li class="suggestion-item suggestion-searched-item">
+              <img
+                class="recent-searched-icon"
+                src="./New-Chrome Assets/recent-searched-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                It is a long established fact that a reader will be distracted
+              </p>
+              <button class="recent-searched-delete-btn" onclick="removeSearchedItem(this)">
+                <img
+                  class="recent-searched-delete-icon"
+                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
+                  alt="img_here"
+                />
+              </button>
+            </li>
+            <li class="suggestion-item suggestion-searched-item">
+              <img
+                class="recent-searched-icon"
+                src="./New-Chrome Assets/recent-searched-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                Lorem ipsum dolor sit amet Lorem 
+              </p>
+              <button class="recent-searched-delete-btn" onclick="removeSearchedItem(this)">
+                <img
+                  class="recent-searched-delete-icon"
+                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
+                  alt="img_here"
+                />
+              </button>
+            </li>
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text
+              </p>
+            </li>
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p>Many desktop publishing packages and web page editors</p>
+            </li>
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p>Many desktop publishing packages and web page editors</p>
+            </li>
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                There are many variations of passages of Lorem Ipsum available
+              </p>
+            </li>
+            <li class="suggestion-item suggestion-unsearched-item">
+              <img
+                class="suggested-icon"
+                src="./New-Chrome Assets/suggested-icon.svg"
+                alt="img_here"
+              />
+              <p>
+                There are many variations of passages of Lorem Ipsum available
+              </p>
+            </li>
+          </ul>
+          <div class="neo-chrome-logo-section">
+            <p>NEO-CHROME</p>
+          </div>
         </div>
       </div>
       <div class="default-apps">
@@ -69,22 +222,22 @@
           <div class="social-child">
             <div class="app-type1 r1">
               <a href="https://web.whatsapp.com/">
-                <img src="./New-Chrome Assets/Whatsapp.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/Whatsapp.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r1">
               <a href="https://youtube.com">
-                <img src="./New-Chrome Assets/YT.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/YT.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://instagram.com">
-                <img src="./New-Chrome Assets/Insta.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/Insta.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://www.linkedin.com">
-                <img src="./New-Chrome Assets/LinkedIn.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/LinkedIn.svg" alt="" />
               </a>
             </div>
           </div>
@@ -94,22 +247,22 @@
           <div class="work-child">
             <div class="app-type1 r1">
               <a href="https://notion.com">
-                <img src="./New-Chrome Assets/NOTION.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/NOTION.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r1">
               <a href="https://chat.openai.com/">
-                <img src="./New-Chrome Assets/Chat GPT.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/Chat GPT.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://github.com/">
-                <img src="./New-Chrome Assets/Git Hub.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/Git Hub.svg" alt="" />
               </a>
             </div>
             <div class="app-type1 r2">
               <a href="https://figma.com">
-                <img src="./New-Chrome Assets/Figma.svg" alt="" />
+                <img class="app-icon" src="./New-Chrome Assets/Figma.svg" alt="" />
               </a>
             </div>
           </div>
@@ -120,34 +273,34 @@
       <div class="dock">
         <div class="theme-button-section">
           <div class="theme-button">
-            <img src="./New-Chrome Assets/Theme Zelda.png" alt="" />
+            <img class="app-icon" src="./New-Chrome Assets/Theme Zelda.png" alt="" />
           </div>
         </div>
         <div class="customised-apps">
           <div class="app-type2">
             <a href="https://discord.com/">
-              <img src="./New-Chrome Assets/Discord.png" alt="" />
+              <img class="app-icon" src="./New-Chrome Assets/Discord.png" alt="" />
             </a>
           </div>
           <div class="app-type2">
             <a href="https://canva.com/">
-              <img src="./New-Chrome Assets/Canva.png" alt="" />
+              <img class="app-icon" src="./New-Chrome Assets/Canva.png" alt="" />
             </a>
           </div>
           <div class="app-type2">
             <a href="https://spline.design/">
-              <img src="./New-Chrome Assets/Spline.png" alt="" />
+              <img class="app-icon" src="./New-Chrome Assets/Spline.png" alt="" />
             </a>
           </div>
           <div class="app-type2">
             <a href="https://stackoverflow.com/">
-              <img src="./New-Chrome Assets/StackFlow.png" alt="" />
+              <img class="app-icon" src="./New-Chrome Assets/StackFlow.png" alt="" />
             </a>
           </div>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
-    <script src="temp.js"></script>
+    <script src="searchbar-optimization.js"></script>
   </body>
 </html>
