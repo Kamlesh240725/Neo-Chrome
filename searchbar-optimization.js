@@ -9,22 +9,43 @@ let seperatorLine = document.getElementsByClassName("seperator-line");
 let searchQuery = document.getElementById("searchQuery");
 let recentSearchDeleteBtn = document.getElementsByClassName(
   "recent-searched-delete-btn"
-)[0];
+);
 
-// function to add clicked suggestion to searchQuery
+// function to add clicked suggestion to searchQuery on clicking the suggestion and remove suggestion on clicking delete btn
 
-for (const key in suggestionItem) {
-  suggestionItem[key].onclick = () => {
-    searchQuery.value = suggestionItem[key].textContent.trim();
-    searchQuery.focus();
-  };
-}
+setInterval(() => {
+  // function to add clicked suggestion to searchQuery on clicking the suggestion
+  for (const key in suggestionItem) {
+    suggestionItem[key].onclick = () => {
+      searchQuery.value = suggestionItem[key].textContent.trim();
+      searchQuery.focus();
+    };
+  }
+  
+  // function to remove suggestion on clicking delete btn
+  for (const key in recentSearchDeleteBtn) {
+    recentSearchDeleteBtn[key].onclick = () => {
+      recentSearchDeleteBtn[key].parentElement.remove();
+      searchQuery.focus();
+    setTimeout(() => {
+      searchQuery.value = "";
+    }, 5);
+    };
+  }
+  togglescroll();
+}, 100);
+
+//.
+//.
+
+
+
+
+
 setInterval(() => {
   searchQuery.onkeydown = (keyInput) => {
-    // keyInput = String.fromCharCode(keyInput.key);
     if (keyInput.key.length == 1){
       console.log(searchQuery.value);
-      // searchQuery.value += keyInput.key;
       console.log(searchQuery.value);
       
     }
@@ -40,39 +61,7 @@ setInterval(() => {
   };
 }, 10);
 
-// setInterval(() => {
-//   for (const key in suggestionItem) {
-//     suggestionItem[key].addEventListener("click", () => {
-//       searchQuery.value = suggestionItem[key].textContent.trim();
-//       searchQuery.focus();
-//     });
-// if (suggestionItem[key].matches(":hover")) {
-//   if (
-//     suggestionItem[key].firstElementChild.src ===
-//     "./New-Chrome Assets/recent-searched-icon.svg"
-//   ) {
-//     suggestionItem[key].firstElementChild.src =
-//       "./New-Chrome Assets/recent-searched-icon-white.svg";
-//   } else
-// if (suggestionItem[4].firstElementChild.src.match("suggested-icon.svg").length) {
-//     suggestionItem[4].firstElementChild.src.replace("suggested-icon.svg","suggested-icon-white.svg");
-//   }
-// }
-// else {
-//   suggestionItem[key].src = "./New-Chrome Assets/recent-searched-icon.svg";
-//   console.log(suggestionItem[key].firstElementChild.src.splice());
 
-// console.log(suggestionItem[key].firstElementChild.src. === "./New-Chrome Assets/recent-searched-icon.svg")
-
-// function to remove suggestion on clicking delete btn
-
-function removeSearchedItem(value) {
-  value.parentElement.remove();
-  searchQuery.focus();
-  setTimeout(() => {
-    searchQuery.value = "";
-  }, 5);
-}
 
 // to hide/unhide the suggestion section depending on input is focused or not
 
@@ -90,6 +79,20 @@ setInterval(() => {
   }
 }, 50);
 
-if (suggestionItem.length > 7) {
+
+// to hide/unhide the scroll bar on no of suggestion are less than 8 or not
+
+function togglescroll() {
+if (suggestionItem[0].length > 7) {
   suggestionList[0].style.overflowY = "scroll";
 }
+else if(suggestionItem[0].length < 7){
+  suggestionList[0].style.overflow = "clip";
+}
+}
+togglescroll();
+
+// console.log(suggestionList);
+// console.log(suggestionList[0]);
+// console.log(Array.from(suggestionList));
+// console.log(suggestionList[0].length);
