@@ -4,6 +4,11 @@ body {
   }
   
   :root {
+    /* Background Images*/
+    --main-background-image: var(--background-image-zelda);
+    --background-image-zelda: url("./New-Chrome Assets/Background Image.webp");
+    --background-image-spiderman: url("./New-Chrome Assets/Group 239.png");
+
     /* fonts */
     --font-audiowide: 'Audiowide';
   
@@ -13,7 +18,9 @@ body {
     /* Colors */
     --color-white: #fff;
     --color-black: #000;
+    --color-a: var(--color-a1);
     --color-a1: #9bcdcd80;
+    --color-a2: #6A7F9780;
   
     /* Border radiuses */
     --br-3xl: 22px;
