@@ -4,7 +4,11 @@ function updateClock() {
   var minutes = now.getMinutes();
 
   // Add leading zeros to minutes and seconds
-  hours = hours > 12 ? (hours -= 12) : hours;
+  if (hours == 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
   minutes = minutes < 10 ? "0" + minutes : minutes;
 
   // Update the clock display
@@ -160,13 +164,12 @@ function minimizeDocks() {
     themeCouraselToggleBtn.getElementsByTagName(
       "img"
     )[0].style.transform = `rotate(0deg)`;
-    console.log("run in");
-    
-}
-console.log("run out ");
+  }
 }
 
-let themeCouraselToggleBtn = document.querySelector(".theme-carousel-toggle-btn");
+let themeCouraselToggleBtn = document.querySelector(
+  ".theme-carousel-toggle-btn"
+);
 let themeCarousel = document.querySelector(".theme-carousel");
 
 themeCouraselToggleBtn.onclick = () => {
@@ -182,7 +185,6 @@ themeCouraselToggleBtn.onclick = () => {
   }
 };
 
-
 //
 // Dock's Clock Functionality
 //
@@ -191,7 +193,20 @@ let minuteHand = document.querySelector(".minute-hand-block");
 let hourHand = document.querySelector(".hour-hand-block");
 let dockDate = document.querySelector(".dock-date");
 let dockMonth = document.querySelector(".dock-month");
-let monthNames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+let monthNames = [
+  "JAN",
+  "FEB",
+  "MAR",
+  "APR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AUG",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DEC",
+];
 
 setInterval(() => {
   let time = new Date();
@@ -204,10 +219,9 @@ setInterval(() => {
   minuteHand.style.transform = `rotate(${minutes * 6}deg)`;
   hourHand.style.transform = `rotate(${hours * 30}deg)`;
   dockMonth.innerHTML = `${month}`;
-  if(date<10){
+  if (date < 10) {
     dockDate.innerHTML = `0${date}`;
-  }
-  else{
+  } else {
     dockDate.innerHTML = `${date}`;
   }
 }, 100);
@@ -215,22 +229,203 @@ setInterval(() => {
 //
 //
 
-
 let stackToggleBtn = document.querySelectorAll(".stack-label");
-console.log(stackToggleBtn);
 
-stackToggleBtn.forEach((item)=>{
-    console.log(item);
-    item.addEventListener("click", ()=>{
-        item.parentElement.classList.add("app-stack-active");
-        stackToggleBtn.forEach((stacks)=>{
-            if(stacks != item){
-                stacks.parentElement.classList.remove("app-stack-active");
-            }
-        })
-    })
-})    
-        
-         
-    
+stackToggleBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.parentElement.classList.add("app-stack-active");
+    stackToggleBtn.forEach((stacks) => {
+      if (stacks != item) {
+        stacks.parentElement.classList.remove("app-stack-active");
+      }
+    });
+  });
+});
 
+//
+//
+//. Spotify Music Player
+//
+//
+
+let musicSlider = document.querySelector("#seek-slider");
+let musicSliderValue = musicSlider.value;
+let playPauseBtn = document.querySelector(".play-pause-btn");
+let forwardBtn = document.querySelector(".forward-btn");
+let backwardBtn = document.querySelector(".backward-btn");
+let audio = document.querySelector(".spotify-audio");
+
+audio.onloadedmetadata = () => {
+  musicSlider.max = Math.floor(audio.duration);
+};
+playPauseBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    setInterval(() => {
+      musicSlider.value = audio.currentTime;
+    }, 1000);
+  } else {
+    audio.pause();
+  }
+  playPauseBtn.classList.toggle("play-pause-btn-paused");
+});
+musicSlider.onchange = () => {
+  audio.currentTime = musicSlider.value;
+};
+
+//
+//
+// Search Bar 
+//
+//
+let searchBar = document.getElementsByClassName("searchbar")[0];
+let suggestionSection = document.getElementsByClassName("suggestion-section");
+let suggestionItem = document.getElementsByClassName("suggestion-item");
+let suggestionList = document.querySelector(".suggestion-list");
+let seperatorLine = document.getElementsByClassName("seperator-line");
+let searchQuery = document.getElementById("searchQuery");
+let recentSearchDeleteBtn = document.getElementsByClassName(
+  "recent-searched-delete-btn"
+);
+let selectedSuggestion = -1;
+
+// function to add clicked suggestion to searchQuery on clicking the suggestion and remove suggestion on clicking delete btn
+
+setInterval(() => {
+  // function to add clicked suggestion to searchQuery on clicking the suggestion
+  for (const key in suggestionItem) {
+    suggestionItem[key].onclick = () => {
+      searchQuery.value = suggestionItem[key].textContent.trim();
+      searchQuery.focus();
+    };
+  }
+     
+  // function to remove suggestion on clicking delete btn
+  for (const key in recentSearchDeleteBtn) {
+    recentSearchDeleteBtn[key].onclick = () => {
+      recentSearchDeleteBtn[key].parentElement.remove();
+      searchQuery.focus();
+    setTimeout(() => {
+      searchQuery.value = "";
+    }, 5);
+    };
+  }
+  // togglescroll();
+}, 100);
+
+//.
+//.
+function clearSuggestions(){
+  suggestionList.innerHTML = "";
+  seperatorLine[0].style.display = "none";
+  suggestionSection[0].style.display = "none";  
+  togglescroll();
+}
+function addSuggestions(suggestionData) {
+  suggestionList.innerHTML = `${suggestionData}`;
+  seperatorLine[0].style.display = "block";
+  suggestionSection[0].style.display = "block";
+  togglescroll();
+}
+
+
+// to add/remove suggestion on every key pressed
+
+searchQuery.addEventListener("keyup",(e)=>{
+  if(!(e.code === 'ArrowUp' || e.code === 'ArrowDown')){
+
+    clearSuggestions();
+    let query = e.target.value;
+    let newSuggestions = [];
+    let suggestionData = '';
+    if (query) {
+      newSuggestions = suggestions.filter((data)=>{return data.toLocaleLowerCase().startsWith(query.toLocaleLowerCase())})
+    }
+    for (let index=0; (index<10 && index<newSuggestions.length) ; index++) {
+      let tempData = `<li class="suggestion-item suggestion-unsearched-item">
+      <img
+        class="suggested-icon"
+        src="./New-Chrome Assets/suggested-icon.svg"
+        alt="img_here"
+      />
+      <p>${newSuggestions[index]}</p>
+    </li>
+    `
+      suggestionData = `${suggestionData}${tempData}`
+    }
+    if(suggestionData){addSuggestions(suggestionData)}  
+  }
+})
+
+// up/down arrow key navigation for searchbar
+
+searchQuery.addEventListener("keydown", (key)=>{
+  if (key.code === 'ArrowUp' && selectedSuggestion>-1) {
+    selectedSuggestion = selectedSuggestion-1;
+    for (let i = 0; i < suggestionList.children.length; i++) {
+      suggestionList.children[i].classList.remove("suggestion-item-selected");
+    }
+    suggestionList.children[selectedSuggestion].classList.add("suggestion-item-selected");
+    searchQuery.value = suggestionList.children[selectedSuggestion].innerText;
+
+    if (selectedSuggestion<3) {
+      suggestionList.scrollTo({
+        top: 0,
+        left: 100,
+        behavior: "smooth",
+      });
+    }
+  }
+  else if (key.code === 'ArrowDown' && selectedSuggestion<(suggestionList.childElementCount-1)) {
+    selectedSuggestion = selectedSuggestion+1;
+    for (let i = 0; i < suggestionList.children.length; i++) {
+      suggestionList.children[i].classList.remove("suggestion-item-selected");
+    }
+    suggestionList.children[selectedSuggestion].classList.add("suggestion-item-selected");
+    searchQuery.value = suggestionList.children[selectedSuggestion].innerText; 
+
+    if (selectedSuggestion>6) {
+      suggestionList.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
+    }
+  }
+
+})
+
+// to hide/unhide the suggestion section depending on input is focused or not
+
+searchQuery.addEventListener("focusin",()=>{
+  if (suggestionList.firstElementChild) {
+    seperatorLine[0].style.display = "block";
+      suggestionSection[0].style.display = "block";
+    }
+    searchBar.style.borderStyle = "solid";
+    searchQuery.placeholder = "";
+  })
+searchQuery.addEventListener("focusout",()=>{
+  if (!searchBar.matches(":hover")){
+  seperatorLine[0].style.display = "none";
+    suggestionSection[0].style.display = "none";
+    searchBar.style.borderStyle = "hidden";
+    searchQuery.placeholder = "Search Google or type a uRL";
+  }
+  else{
+    searchQuery.focus();
+  }
+})
+
+
+// to hide/unhide the scroll bar on no of suggestion are less than 8 or not
+
+function togglescroll() {
+    if (suggestionList.childElementCount > 7) {
+      suggestionList.style.overflowY = "scroll";
+      console.log("scroll addwd");
+    }
+    else if(suggestionList.childElementCount < 7){
+      suggestionList.style.overflowY = "hidden";
+    }
+}

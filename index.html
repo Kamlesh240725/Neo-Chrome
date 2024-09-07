@@ -24,11 +24,12 @@
       </div>
       <div class="spotify">
         <div class="spotify-player">
+          <audio src="./New-Chrome Assets/_Ram Siya Ram_320(PagalWorld.com.sb).mp3" class="spotify-audio"></audio>
           <div class="audio-thumbnail"></div>
           <div class="audio-controls-section">
             <div class="controls-row1">
               <div class="song-name-container">
-                <marquee behavior="" direction=""
+                <marquee id="song-name" behavior="" direction="" 
                   >Ram Siya Ram (From "Adipurush")</marquee
                 >
               </div>
@@ -39,7 +40,7 @@
             </div>
             <div class="controls-row3">
               <button class="backward-btn"></button>
-              <button class="play-pause-btn"></button>
+              <button class="play-pause-btn play-pause-btn-paused"></button>
               <button class="forward-btn"></button>
             </div>
           </div>
@@ -68,22 +69,14 @@
         <div class="seperator-line"></div>
         <div class="suggestion-section">
           <ul class="suggestion-list">
-            <li class="suggestion-item suggestion-unsearched-item">
-              <img
-                class="suggested-icon"
-                src="./New-Chrome Assets/suggested-icon.svg"
-                alt="img_here"
-              />
-              <p></p>
-            </li>
-            <li class="suggestion-item suggestion-searched-item">
+            <!-- <li class="suggestion-item suggestion-searched-item">
               <img
                 class="recent-searched-icon"
                 src="./New-Chrome Assets/recent-searched-icon.svg"
                 alt="img_here"
               />
               <p>
-                It is a long established fact that a reader will be distracted
+                lorem ipsum
               </p>
               <button class="recent-searched-delete-btn">
                 <img
@@ -92,118 +85,17 @@
                   alt="img_here"
                 />
               </button>
-            </li>
-            <li class="suggestion-item suggestion-searched-item">
-              <img
-                class="recent-searched-icon"
-                src="./New-Chrome Assets/recent-searched-icon.svg"
-                alt="img_here"
-              />
-              <p>
-                It is a long established fact that a reader will be distracted
-              </p>
-              <button class="recent-searched-delete-btn">
-                <img
-                  class="recent-searched-delete-icon"
-                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
-                  alt="img_here"
-                />
-              </button>
-            </li>
-            <li class="suggestion-item suggestion-searched-item">
-              <img
-                class="recent-searched-icon"
-                src="./New-Chrome Assets/recent-searched-icon.svg"
-                alt="img_here"
-              />
-              <p>
-                It is a long established fact that a reader will be distracted
-              </p>
-              <button class="recent-searched-delete-btn">
-                <img
-                  class="recent-searched-delete-icon"
-                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
-                  alt="img_here"
-                />
-              </button>
-            </li>
-            <li class="suggestion-item suggestion-searched-item">
-              <img
-                class="recent-searched-icon"
-                src="./New-Chrome Assets/recent-searched-icon.svg"
-                alt="img_here"
-              />
-              <p>Delete This</p>
-              <button class="recent-searched-delete-btn">
-                <img
-                  class="recent-searched-delete-icon"
-                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
-                  alt="img_here"
-                />
-              </button>
-            </li>
-            <li class="suggestion-item suggestion-searched-item">
-              <img
-                class="recent-searched-icon"
-                src="./New-Chrome Assets/recent-searched-icon.svg"
-                alt="img_here"
-              />
-              <p>Lorem ipsum dolor sit amet Lorem</p>
-              <button class="recent-searched-delete-btn">
-                <img
-                  class="recent-searched-delete-icon"
-                  src="./New-Chrome Assets/recent-searched-delete-icon.svg"
-                  alt="img_here"
-                />
-              </button>
-            </li>
-            <li class="suggestion-item suggestion-unsearched-item">
+            </li> -->
+            <!-- <li class="suggestion-item suggestion-unsearched-item">
               <img
                 class="suggested-icon"
                 src="./New-Chrome Assets/suggested-icon.svg"
                 alt="img_here"
               />
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text
+                Lorem Ipsum
               </p>
-            </li>
-            <li class="suggestion-item suggestion-unsearched-item">
-              <img
-                class="suggested-icon"
-                src="./New-Chrome Assets/suggested-icon.svg"
-                alt="img_here"
-              />
-              <p>Many desktop publishing packages and web page editors</p>
-            </li>
-            <li class="suggestion-item suggestion-unsearched-item">
-              <img
-                class="suggested-icon"
-                src="./New-Chrome Assets/suggested-icon.svg"
-                alt="img_here"
-              />
-              <p>Many desktop publishing packages and web page editors</p>
-            </li>
-            <li class="suggestion-item suggestion-unsearched-item">
-              <img
-                class="suggested-icon"
-                src="./New-Chrome Assets/suggested-icon.svg"
-                alt="img_here"
-              />
-              <p>
-                There are many variations of passages of Lorem Ipsum available
-              </p>
-            </li>
-            <li class="suggestion-item suggestion-unsearched-item">
-              <img
-                class="suggested-icon"
-                src="./New-Chrome Assets/suggested-icon.svg"
-                alt="img_here"
-              />
-              <p>
-                There are many variations of passages of Lorem Ipsum available
-              </p>
-            </li>
+            </li> -->
           </ul>
           <div class="neo-chrome-logo-section">
             <p>NEO-CHROME</p>
@@ -586,7 +478,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="searchbar-optimization.js"></script>
-    <!-- <script src="testing.js"></script> -->
+    <script src="data.js"></script>
+    <script src="testing.js"></script>
   </body>
 </html>

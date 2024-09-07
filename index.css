@@ -226,6 +226,9 @@ body {
   background-image: url("./New-Chrome Assets/backward-btn.svg");
 }
 .play-pause-btn {
+  background-image: url("./New-Chrome Assets/Assistant.png");
+}
+.play-pause-btn-paused {
   background-image: url("./New-Chrome Assets/play-pause-btn.svg");
 }
 .forward-btn {
@@ -284,6 +287,9 @@ form {
 #btn {
   display: none;
 }
+.suggestion-section{
+  display: none;
+}
 .seperator-line {
   position: absolute;
   top: 51px;
@@ -292,6 +298,7 @@ form {
   width: 448.5px;
   margin-bottom: 4px;
   border: 0.5px solid #00000066;
+  display: none;
 }
 .suggestion-list {
   list-style: none;
@@ -328,6 +335,10 @@ form {
 .suggestion-item:hover {
   background-color: #013b3933;
   color: #ffffff99;
+}
+.suggestion-item-selected{
+  background-color: #013b3933 !important;
+  color: #ffffff99 !important;
 }
 .suggestion-searched-item {
   grid-template-columns: 36px 1fr 30px;
