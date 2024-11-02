@@ -126,6 +126,13 @@ let blurLayer = document.getElementsByClassName("blur-layer")[0];
 let docksSection = document.getElementsByClassName("dock-section")[0];
 let dock = document.getElementsByClassName("dock")[0];
 
+
+function themebuttonHandler() {
+  docksToggleBtn.click();
+  setTimeout(() => {
+    themeCouraselToggleBtn.click();
+  }, 400);
+}
 docksToggleBtn.onclick = () => {
   workspaceSection.insertAdjacentHTML(
     "afterend",
@@ -428,4 +435,16 @@ function togglescroll() {
     else if(suggestionList.childElementCount < 7){
       suggestionList.style.overflowY = "hidden";
     }
+}
+
+
+// theme Change Script
+
+function changeTheme(e) {
+  document.querySelector(":root").style.setProperty("--main-background-image",`var(--background-image-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--main-theme-button",`var(--theme-button-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--color-a",`var(--color-a-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--color-a1",`var(--color-a1-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--color-a2",`var(--color-a2-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--searchbarhovercolor",`var(--searchbarhovercolor-${e.accessKey})`)
 }

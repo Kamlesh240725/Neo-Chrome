@@ -1,13 +1,30 @@
+
 body {
     margin: 0;
     line-height: normal;
   }
+
   
   :root {
+
+    --pauseBtn: url("./New-Chrome Assets/pause.png");
     /* Background Images*/
     --main-background-image: var(--background-image-zelda);
-    --background-image-zelda: url("./New-Chrome Assets/Background Image.webp");
-    --background-image-spiderman: url("./New-Chrome Assets/Group 239.png");
+    --background-image-zelda: url("./New-Chrome Assets/ZeldaBgImg.webp");
+    --background-image-spiderman: url("./New-Chrome Assets/SpidermanBgImg.webp");
+    --background-image-knave: url("./New-Chrome Assets/KnaveBgImg.webp");
+
+    /* Theme Change Variables*/
+    --main-theme-button: var(--theme-button-zelda);
+    --theme-button-zelda: url("./New-Chrome Assets/Theme Zelda.png");
+    --theme-button-spiderman: url("./New-Chrome Assets/Theme Spiderman.png");
+    --theme-button-knave: url("./New-Chrome Assets/Theme Knave.png");
+
+    --searchbarhovercolor: var(--searchbarhovercolor-zelda);
+    --searchbarhovercolor-zelda: #013B3933;
+    --searchbarhovercolor-spiderman: #00192733;
+    --searchbarhovercolor-knave: #3c001633;
+
 
     /* fonts */
     --font-audiowide: 'Audiowide';
@@ -18,10 +35,22 @@ body {
     /* Colors */
     --color-white: #fff;
     --color-black: #000;
-    --color-a: var(--color-a1);
-    --color-a1: #9bcdcd80;
-    --color-a2: #6A7F9780;
-  
+    --color-a: var(--color-a-zelda);
+    --color-a-zelda: #9bcdcd80;
+    --color-a-spiderman: #6A7F9780;
+    --color-a-knave: #7E616C80;
+    --color-a1: var(--color-a1-zelda);
+    --color-a1-zelda: #4181896f;
+    --color-a1-spiderman: #18343eb6;
+    --color-a1-knave: #481E32;
+    --color-a2: var(--color-a2-zelda);
+    --color-a2-zelda: #5ab1bd75;
+    --color-a2-spiderman: #457e9277;
+    --color-a2-knave: #9f4f7659;
+
+
+
+
     /* Border radiuses */
     --br-3xl: 22px;
     --br-43xl: 42px;

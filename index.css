@@ -76,6 +76,7 @@ body {
   grid-template-rows: 33vh 1fr 1fr;
   /* background-color: #171c1c; */
   background-image: var(--main-background-image);
+  -webkit-transition: background 0.05s ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
   font-size: var(--font-size-xl);
@@ -110,7 +111,7 @@ body {
   display: flex;
   align-items: center;
   height: 3.5rem;
-  text-shadow: 4px 4px 36.8px rgba(72, 238, 198, 0.3);
+  /* text-shadow: 4px 4px 36.8px rgba(72, 238, 198, 0.3); */
   background-image: var(--main-background-image);
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -122,7 +123,7 @@ body {
   font-size: 60px;
   align-self: end;
   margin-right: 71px;
-  text-shadow: 3.4px 3.4px 31.67px rgba(72, 238, 198, 0.3);
+  /* text-shadow: 3.4px 3.4px 31.67px rgba(72, 238, 198, 0.3); */
 }
 .day {
   align-self: center;
@@ -144,7 +145,7 @@ body {
   color: var(--color-black);
   border-radius: var(--br-43xl);
   background-color: var(--color-a);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
 }
 .spotify-player {
@@ -226,7 +227,7 @@ body {
   background-image: url("./New-Chrome Assets/backward-btn.svg");
 }
 .play-pause-btn {
-  background-image: url("./New-Chrome Assets/Assistant.png");
+  background-image: var(--pauseBtn);
 }
 .play-pause-btn-paused {
   background-image: url("./New-Chrome Assets/play-pause-btn.svg");
@@ -243,7 +244,7 @@ body {
   width: 488px;
   height: fit-content;
   background-color: var(--color-a);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   border-radius: 28px;
   border: 1.08px solid #00000040;
@@ -333,11 +334,11 @@ form {
   border-radius: 0px 12px 12px 0px;
 }
 .suggestion-item:hover {
-  background-color: #013b3933;
+  background-color: var(--searchbarhovercolor);
   color: #ffffff99;
 }
 .suggestion-item-selected{
-  background-color: #013b3933 !important;
+  background-color: var(--searchbarhovercolor) !important;
   color: #ffffff99 !important;
 }
 .suggestion-searched-item {
@@ -409,7 +410,7 @@ form {
   justify-content: space-evenly;
   border-radius: var(--br-43xl);
   background-color: var(--color-a);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
 }
 .social-child,
@@ -449,7 +450,7 @@ form {
   border: 1.24px solid #00000040;
   border-radius: 23px;
   background-color: #00000045;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -474,7 +475,7 @@ form {
   .google-workspace {
     height: 172px;
     border-radius: 25px;
-    background-color: #4181896f;
+    background-color: var(--color-a1);
   }
   .google-workspace-icon-section {
     height: 47px;
@@ -502,8 +503,8 @@ form {
   width: 70px;
   height: 70px;
   border-radius: 22px;
-  background-color: #5ab1bd75;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: var(--color-a2);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
 }
 .google-workspace-icon-section {
@@ -557,7 +558,7 @@ form {
 .dock {
   border-radius: 28px;
   background-color: var(--color-a);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   width: 554.29px;
   grid-row-start: 3;
@@ -584,6 +585,7 @@ form {
 }
 .theme-button > img {
   width: 154.83px;
+  content: var(--main-theme-button);
 }
 .customised-apps {
   display: flex;
@@ -674,7 +676,9 @@ form {
 
 .app-type4-icon {
   height: 43.63px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
+  max-width: none !important;
 }
 .app-stack-active{
   .stack-label {

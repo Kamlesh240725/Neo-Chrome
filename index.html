@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./temp.css" />
     <link
       rel="icon"
       type="image/png"
@@ -304,10 +306,9 @@
         </div>
         <div class="dock">
           <div class="theme-button-section">
-            <div class="theme-button">
+            <div class="theme-button" onclick="themebuttonHandler()">
               <img
                 class="app-icon"
-                src="./New-Chrome Assets/Theme Zelda.png"
                 alt=""
               />
             </div>
@@ -369,16 +370,16 @@
                         <div class="minute-hand"></div>
                     </div>
                   </div>
-                  <div class="dock-date">29</div>
+                  <div class="dock-date shadow-inner"></div>
 
                 </div>
               </div>
               <div class="themes-section">
                 <div class="theme-carousel">
-                  <div class="theme-items"></div>
-                  <div class="theme-items"></div>
-                  <div class="theme-items"></div>
-                  <div class="theme-items"></div>
+                  <div accessKey="zelda" class="theme-items hover:scale-[1.15] hover:translate-y-[-0.1rem] transition-all ease-in-out duration-100 shadow-inner" onclick="changeTheme(this)"><img src="./New-Chrome Assets/ThemeCarouselButtonZelda.png" alt=""></div>
+                  <div accessKey="spiderman" class="theme-items hover:scale-[1.15] hover:translate-y-[-0.1rem] transition-all ease-in-out duration-100 shadow-inner" onclick="changeTheme(this)"><img src="./New-Chrome Assets/ThemeCarouselButtonSpiderman.png" alt=""></div>
+                  <div accessKey="knave" class="theme-items hover:scale-[1.15] hover:translate-y-[-0.1rem] transition-all ease-in-out duration-100 shadow-inner" onclick="changeTheme(this)"><img src="./New-Chrome Assets/ThemeCarouselButtonKnave.png" alt=""></div>
+                  <div accessKey="theme4" class="theme-items hover:scale-[1.15] hover:translate-y-[-0.1rem] transition-all ease-in-out duration-100 shadow-inner" onclick=""><img src="./New-Chrome Assets/ThemeCarouselButtonSoon.png" alt=""></div>
                 </div>
                 <div class="theme-carousel-toggle-btn"><img src="./New-Chrome Assets/Vector.png" alt=""></div>
               </div>
@@ -466,7 +467,7 @@
                     <img
                       src="./New-Chrome Assets/StackFlow.png"
                       alt=""
-                      class="app-type4-icon"
+                      class="app-type4-icon "
                     />
                   </div>
                 </div>

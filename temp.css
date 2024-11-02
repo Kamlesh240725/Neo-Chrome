@@ -1,0 +1,9 @@
+.spotify-player::after{
+    content: "No Database Connected";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 270px;
+    color: rgb(255, 236, 62);
+}
