@@ -76,7 +76,7 @@ body {
   grid-template-rows: 33vh 1fr 1fr;
   /* background-color: #171c1c; */
   background-image: var(--main-background-image);
-  -webkit-transition: background 0.05s ease-in-out;
+  /* -webkit-transition: background 0.05s ease-in-out; */
   background-repeat: no-repeat;
   background-size: cover;
   font-size: var(--font-size-xl);
@@ -100,6 +100,16 @@ body {
   border-radius: 31.07px;
   background-color: var(--color-a);
   backdrop-filter: blur(6px);
+  transition: all 0.15s;
+}
+.date-and-time:hover{
+  transform: scale(1.03);
+  .day{
+    text-shadow: 4px 4px 36.8px var(--color-a3);
+  }
+  .time{
+    text-shadow: 3.4px 3.4px 31.67px var(--color-a3);
+  }
 }
 .time,
 .day {
@@ -145,8 +155,12 @@ body {
   color: var(--color-black);
   border-radius: var(--br-43xl);
   background-color: var(--color-a);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
+  transition: all 0.15s;
+}
+.spotify:hover{
+    filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+    transform: scale(1.02);
 }
 .spotify-player {
   width: 281.48px;
@@ -244,11 +258,15 @@ body {
   width: 488px;
   height: fit-content;
   background-color: var(--color-a);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   border-radius: 28px;
   border: 1.08px solid #00000040;
   border-style: hidden;
+  transition: all 0.15s;
+}
+.searchbar:hover{
+  filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+  transform: scale(1.01);
 }
 .search-section {
   aspect-ratio: 552 / 63;
@@ -412,6 +430,15 @@ form {
   background-color: var(--color-a);
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
+  transition: all 0.15s;
+}
+.social:hover{
+  filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+  transform: scale(1.02);
+}
+.work:hover{
+  filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+  transform: scale(1.02);
 }
 .social-child,
 .work-child {
@@ -438,6 +465,14 @@ form {
 .app-type1 {
   width: 47.22px;
   aspect-ratio: 1/1;
+  transition: all 0.15s;
+}
+.app-type1:hover{
+  transform: scale(1.15);
+}
+.app-type1:active{
+  transform: scale(0.7);
+
 }
 .app-type1 img {
   width: 100%;
@@ -450,7 +485,6 @@ form {
   border: 1.24px solid #00000040;
   border-radius: 23px;
   background-color: #00000045;
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -467,6 +501,10 @@ form {
   .google-workspace-icon {
     transition: all 0.5s ease;
   }
+}
+.google-workspace-section:hover{
+    filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+    transform: scale(1.02);
 }
 .expanded-workspace {
   height: 180px;
@@ -558,7 +596,6 @@ form {
 .dock {
   border-radius: 28px;
   background-color: var(--color-a);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
   width: 554.29px;
   grid-row-start: 3;
@@ -568,10 +605,36 @@ form {
   display: flex;
   position: absolute;
   bottom: 0px;
+  transition: all 0.15s;
+}
+.dock:hover{
+  border-radius: 50px;
+  filter: drop-shadow(1px 1px 5px var(--color-a3)) !important;
+  transform: scale(1.005);
 }
 .dock-expansion-button-section {
   display: flex;
   justify-content: center;
+  .dock-expansion-button{
+    transition: all 0.2s;
+    transform: scale(1.1);
+
+  }
+  .dock-expansion-button{
+    height: 30px;
+    width: 100px;
+  }
+  .dock-expansion-button img{
+    width: 67px;
+  }
+  .dock-expansion-button:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(1px 1px 5px #eee);
+  }
+  .dock-expansion-button:active{
+    transform: scale(0.7) translateY(-6px);
+
+  }
 }
 .theme-button-section {
   display: flex;
@@ -582,9 +645,17 @@ form {
 .theme-button {
   display: flex;
   align-items: center;
+  transition: all 0.15s;
+}
+.theme-button:hover{
+  transform: scale(1.1);
+}
+.theme-button:active{
+  transform: scale(0.7);
 }
 .theme-button > img {
   width: 154.83px;
+  border-radius: 16px;
   content: var(--main-theme-button);
 }
 .customised-apps {
@@ -597,6 +668,13 @@ form {
   width: 49.55px;
   aspect-ratio: 1/1;
   position: relative;
+  transition: all 0.15s;
+}
+.app-type2:hover{
+  transform: scale(1.15);
+}
+.app-type2:active{
+  transform: scale(0.7);
 }
 .app-type2 a {
   position: absolute;

@@ -117,9 +117,7 @@ workspaceSection.onmouseleave = () => {
 // Docks Section PopUp/PopDown
 //
 
-let docksToggleBtn = document.getElementsByClassName(
-  "dock-expansion-button"
-)[0];
+let docksToggleBtn = document.querySelector(".dock-expansion-button");
 let expandableDocks = document.getElementsByClassName("expandable-dock")[0];
 let expandableDocksblock = document.getElementById("expandable-dock");
 let blurLayer = document.getElementsByClassName("blur-layer")[0];
@@ -446,5 +444,6 @@ function changeTheme(e) {
   document.querySelector(":root").style.setProperty("--color-a",`var(--color-a-${e.accessKey})`)
   document.querySelector(":root").style.setProperty("--color-a1",`var(--color-a1-${e.accessKey})`)
   document.querySelector(":root").style.setProperty("--color-a2",`var(--color-a2-${e.accessKey})`)
+  document.querySelector(":root").style.setProperty("--color-a3",`var(--color-a3-${e.accessKey})`)
   document.querySelector(":root").style.setProperty("--searchbarhovercolor",`var(--searchbarhovercolor-${e.accessKey})`)
 }

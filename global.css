@@ -47,6 +47,10 @@ body {
     --color-a2-zelda: #5ab1bd75;
     --color-a2-spiderman: #457e9277;
     --color-a2-knave: #9f4f7659;
+    --color-a3: var(--color-a3-zelda);
+    --color-a3-zelda: #48eec64d;
+    --color-a3-spiderman: #18566d77;
+    --color-a3-knave: #850b466c;
 
 
 
