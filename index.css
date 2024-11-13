@@ -10,6 +10,14 @@
   font-family: "Inter";
   src: url("./New-Chrome Assets/Inter-VariableFont_opsz,wght.woff");
 }
+@keyframes rotate360 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 @keyframes appPopUp {
   0% {
     transform: scale(0) translateY(-10px);
@@ -167,6 +175,14 @@ body {
   height: 111.84px;
   display: flex;
   justify-content: space-between;
+  button:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+  }
+  button:active{
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+  }
 }
 
 .spotify-player .audio-thumbnail {
@@ -212,6 +228,15 @@ body {
   height: 10px;
   border-radius: 50%;
 }
+#seek-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease;
+}
+#seek-slider::-webkit-slider-thumb:active {
+    transform: scale(0.8);
+    transition: all 0.1s ease;
+}
+
 .controls-row3 {
   display: flex;
   align-items: center;
@@ -241,9 +266,6 @@ body {
   background-image: url("./New-Chrome Assets/backward-btn.svg");
 }
 .play-pause-btn {
-  background-image: var(--pauseBtn);
-}
-.play-pause-btn-paused {
   background-image: url("./New-Chrome Assets/play-pause-btn.svg");
 }
 .forward-btn {
@@ -542,7 +564,6 @@ form {
   height: 70px;
   border-radius: 22px;
   background-color: var(--color-a2);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(6px);
 }
 .google-workspace-icon-section {
@@ -635,6 +656,9 @@ form {
     transform: scale(0.7) translateY(-6px);
 
   }
+}
+.eleone{
+  animation: rotate360 3s linear infinite;
 }
 .theme-button-section {
   display: flex;

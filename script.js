@@ -254,29 +254,79 @@ stackToggleBtn.forEach((item) => {
 //
 
 let musicSlider = document.querySelector("#seek-slider");
+let songName = document.querySelector("#song-name");
+let songThumb = document.querySelector(".audio-thumbnail");
 let musicSliderValue = musicSlider.value;
 let playPauseBtn = document.querySelector(".play-pause-btn");
 let forwardBtn = document.querySelector(".forward-btn");
 let backwardBtn = document.querySelector(".backward-btn");
 let audio = document.querySelector(".spotify-audio");
-
+let songIdx = 0;
 audio.onloadedmetadata = () => {
   musicSlider.max = Math.floor(audio.duration);
 };
 playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
+    audio.classList.toggle("playing")
     setInterval(() => {
       musicSlider.value = audio.currentTime;
+      if(musicSlider.value == musicSlider.max){nextSong()}
     }, 1000);
+    playPauseBtn.style.backgroundImage = `url("./New-Chrome Assets/pause.svg")`
   } else {
     audio.pause();
+    audio.classList.toggle("playing")
+    playPauseBtn.style.backgroundImage = `url("./New-Chrome Assets/play-pause-btn.svg")`
   }
-  playPauseBtn.classList.toggle("play-pause-btn-paused");
+  // playPauseBtn.classList.toggle("play-pause-btn-paused");
 });
 musicSlider.onchange = () => {
   audio.currentTime = musicSlider.value;
 };
+
+function loopSong(element) {
+  audio.classList.toggle("looping")
+  console.log(element.style.backgroundImage);
+  if (audio.classList.contains("looping")) {
+    element.style.backgroundImage = `url("./New-Chrome Assets/loop-on.svg")`
+  } else {
+    element.style.backgroundImage = `url("./New-Chrome Assets/loop-toggle-btn.svg")`
+  }
+}
+
+function nextSong() {
+  if (!audio.classList.contains("looping")) {
+    if(songsDataList.length == songIdx+1){
+      songIdx = 0;
+    }
+    else{
+      songIdx++;
+    }
+  }
+  audio.currentTime = 0
+  songChange(songIdx)
+}
+function prevSong() {
+  if(!audio.classList.contains("looping") && audio.currentTime<1){
+    if(0 == songIdx){
+      songIdx = songsDataList.length-1;
+    }
+    else{
+      songIdx--;
+    }
+  }
+  audio.currentTime = 0
+  songChange(songIdx)
+}
+function songChange(index) {
+  audio.src = `${songsDataList[index].audioURL}`
+    songName.innerHTML = `${songsDataList[index].name}`
+    songThumb.style.backgroundImage=`url(${songsDataList[index].audioThumbURL})`
+    if(audio.classList.contains("playing")){
+      audio.play();
+    }
+}
 
 //
 //

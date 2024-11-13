@@ -1,3 +1,32 @@
+const songsDataList = [
+  {
+    name: `Ram Siya Ram (From "Adipurush")`,
+    audioURL : `./New-Chrome Assets/songs/Ram_Siya_Ram.mp3`,
+    audioThumbURL : `https://i.scdn.co/image/ab67616d00001e02497b38a2a59095193de438d1`
+  },
+  {
+    name: `Chaudhary`,
+    audioURL : `./New-Chrome Assets/songs/Chaudhary.mp3`,
+    audioThumbURL : `https://i.scdn.co/image/ab67616d00001e0227c59173f1d904947229613f`
+  },
+  {
+    name: `Laal Peeli Akhiyaan`,
+    audioURL : `./New-Chrome Assets/songs/Laal_Peeli_Akhiyaan.mp3`,
+    audioThumbURL : `https://i.scdn.co/image/ab67616d00001e026039b4e6fbd1c21f4b3c582d`
+  },
+  {
+    name: `Desi Kalakaar`,
+    audioURL : `./New-Chrome Assets/songs/Desi_Kalakaar.mp3`,
+    audioThumbURL : `https://i.scdn.co/image/ab67616d00001e0265ce8c712e4fb894bc88461b`
+  },
+  {
+    name: `One Love`,
+    audioURL : `./New-Chrome Assets/songs/One_Love.mp3`,
+    audioThumbURL : `https://i.scdn.co/image/ab67616d00001e02d7eb20034ff1c7b7bb3629de`
+  }
+]
+
+
 let suggestions = [
   "Satta",
   "Cricbuzz",
