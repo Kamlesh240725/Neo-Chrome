@@ -11,7 +11,7 @@ Visit Neo Chrome here [[link](https://neochrome.netlify.app/)]
 ## Authors
 
 - Developer [@KamleshSuthar](https://www.github.com/Kamlesh240725)
-- Designer [@ManusLimbachiya](https://www.github.com/Kamlesh240725)
+- Designer [@ManusLimbachiya](https://www.github.com/TheHoarder31)
 
 
 ## Screenshots
