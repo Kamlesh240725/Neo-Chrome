@@ -8,6 +8,12 @@ Neo Chrome is a customized new tab interface for Google Chrome, designed with HT
 Visit Neo Chrome here [[link](https://neochrome.netlify.app/)]
 
 
+## Authors
+
+- Developer [@KamleshSuthar](https://www.github.com/Kamlesh240725)
+- Designer [@ManusLimbachiya](https://www.github.com/Kamlesh240725)
+
+
 ## Screenshots
 
 ![App Screenshot](https://github.com/Kamlesh240725/Neo-Chrome/blob/main/New-Chrome%20Assets/readme/Screenshot_1.png)
