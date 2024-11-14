@@ -5,7 +5,7 @@ Neo Chrome is a customized new tab interface for Google Chrome, designed with HT
 
 ## Screenshots
 
-![App Screenshot]([https://im.ge/i/Screenshot-2024-11-14-101825.keF9Y0](https://i.im.ge/2024/11/14/keF9Y0.Screenshot-2024-11-14-101825.png))
+![App Screenshot](https://github.com/Kamlesh240725/Neo-Chrome/blob/main/New-Chrome%20Assets/readme/Screenshot_1.png)
 
 Features
 
