@@ -1,6 +1,11 @@
-NeoChrome is a customized new tab interface for Google Chrome, designed with HTML, CSS, and JavaScript. This project replaces the default Chrome new tab with a beautifully crafted dashboard that enhances both functionality and aesthetics.
+# Neo Chrome
 
-<!-- You can add a screenshot link here to showcase the project -->
+Neo Chrome is a customized new tab interface for Google Chrome, designed with HTML, CSS, and JavaScript. This project replaces the default Chrome new tab with a beautifully crafted dashboard that enhances both functionality and aesthetics.
+
+
+## Screenshots
+
+![App Screenshot]([https://im.ge/i/Screenshot-2024-11-14-101825.keF9Y0](https://i.im.ge/2024/11/14/keF9Y0.Screenshot-2024-11-14-101825.png))
 
 Features
 
