@@ -1,6 +1,11 @@
+
 # Neo Chrome
 
 Neo Chrome is a customized new tab interface for Google Chrome, designed with HTML, CSS, and JavaScript. This project replaces the default Chrome new tab with a beautifully crafted dashboard that enhances both functionality and aesthetics.
+
+## Demo
+
+Visit Neo Chrome here [[link](https://neochrome.netlify.app/)]
 
 
 ## Screenshots
@@ -21,7 +26,15 @@ Neo Chrome is a customized new tab interface for Google Chrome, designed with HT
 
 ## Tech Stack
 
-**Languages Used**: HTML,CSS and Javascript
+1. Languages Used: 
+- HTML
+- CSS
+- Javascript
+2. Deployment: 
+- Netlify
+3. Version Control: 
+- Git
+- Github
 
 ## Installation
 
@@ -32,17 +45,22 @@ Neo Chrome is a customized new tab interface for Google Chrome, designed with HT
 ```
 2. **Open `index.html` in your browser**:
 
-You can open the `index.html` file directly in Chrome to see the new tab design.
-To set it as your Chrome new tab, you may need a Chrome extension like `Custom New Tab URL` to redirect your new tab page to index.html.   
-
+    You can open the `index.html` file directly in Chrome to see the new tab design.
+    To set it as your Chrome new tab, you may need a Chrome extension like `Custom New Tab URL` to redirect your new tab page to index.html.   
 ## Contributing
 
 Contributions, issues, and feature requests are always welcome!
 
  Feel free to check the *issues page*.
-
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://choosealicense.com/licenses/mit/)
  file for details.
+
+## Acknowledgements
+
+ - Background images inspired by fantasy art and designed to create an immersive experience.
+ - Icons from various open-source icon packs.
+ - Netlify for hosting the Project
+ - Designed by - **Manus Limbachiya**
+
