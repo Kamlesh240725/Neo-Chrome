@@ -17,6 +17,8 @@ Visit Neo Chrome here [[link](https://neochrome.netlify.app/)]
 ## Screenshots
 
 ![App Screenshot](https://github.com/Kamlesh240725/Neo-Chrome/blob/main/New-Chrome%20Assets/readme/Screenshot_1.png)
+![App Screenshot](https://github.com/Kamlesh240725/Neo-Chrome/blob/main/New-Chrome%20Assets/readme/Screenshot_2.png)
+![App Screenshot](https://github.com/Kamlesh240725/Neo-Chrome/blob/main/New-Chrome%20Assets/readme/Screenshot_3.png)
 
 
 ## Features
